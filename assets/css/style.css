@@ -1,0 +1,174 @@
+/* Styling starts here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+  body {
+  width: 100%;
+  
+}
+/*style header star*/
+header {
+  width: auto;
+  margin: 30px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+header a {
+  width: auto;
+  text-decoration: none;
+  color: rgb(36, 100, 84);
+  font-size: 38px;
+}
+
+header h4 {
+  width: auto;
+
+  display: flex;
+  font-size: 18px;
+}
+
+.information {
+  background-color: white;
+  border: 0px solid white;
+  margin-top: 0px;
+  font-size: 22px;
+}
+
+/*style header end*/
+/*style main start*/
+main {
+  margin-top: 60px;
+  display: flex;
+  flex: 1;
+}
+
+h3 {
+  font-size: 25px;
+}
+button {
+  width: auto;
+  background-color: #6b03fc;
+  padding: 10px;
+  margin-top: 24px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  color:honeydew;
+}
+
+button:hover {
+  background-color: violet;
+}
+
+.container {
+  margin: auto;
+  width: 950px;
+  flex: 1;
+  
+  
+}
+.quiz-start {
+  margin-top: 60px;
+  flex: 1;
+  text-align: center;
+}
+
+.quiz-start h1 {
+    margin: 15px 15px;
+    text-align: center;
+  }
+
+.quiz-start p {
+  text-align: justify;
+  font-size: 25px;
+  text-align: center;
+
+}
+
+.show-questions ol{
+    list-style-type: none;
+}
+.form-score{
+  margin-top: 60px;
+  flex: 1;
+}
+.form-score h1 {
+  font-size: 26px;
+}
+.form-score label,
+p {
+  font-size: 24px;
+  margin: 5px;
+}
+.form-score input {
+  height: 35px;
+}
+/*style for highscores.html*/
+h1 {
+  margin-bottom: 15px;
+}
+
+.score-list ol li {
+  font-size: 20px;
+  background-color: rgb(243, 235, 235);
+}
+
+/*style main end*/
+
+/*MEdiaQueries*/
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  /* this will be applied on any screen smaller than 980px */
+  header {
+    width: 100%;
+  }
+
+  main {
+    flex: 1 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* this will be applied on any screen between 768px and 575px */
+
+  header {
+    width: 100%;
+  }
+
+  main {
+    flex: 1 100%;
+  }
+  header a {
+    font-size: 35px;
+  }
+
+  header h4 {
+    font-size: 24px;
+  }
+
+  .information {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header a {
+    font-size: 35px;
+  }
+
+  header h4 {
+    font-size: 24px;
+  }
+
+  .information {
+    font-size: 24px;
+  }
+}
+
+/* Styling starts here */

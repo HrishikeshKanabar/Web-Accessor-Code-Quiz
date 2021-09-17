@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Code Quiz</title>
+
+</head>
+<body >
+  <!--START OF HEADER-->
+  <header class="header">
+    <a id="high-score-link"  href="viewhightscore.html" class="information"> View high scores </a> 
+      <h3>Time: <span id="cnt"></span></h3>
+  </header>
+  <!--END OF HEADER-->
+  
+  <!--MAIN CONTENT START-->
+    <main  class="container" id="main">
+      <div id="qa"> 
+      <div class="quiz-start" id="start">
+          <h1 id="h1star">Coding Quiz Challenge </h1>
+          <p> 
+              Try to answer the following code-related question within the time limit.<br/>
+              Keep in mind that the incorrect answers will penalize your <br/>
+              score/time by ten seconds!
+          </p>
+          <!--Button to start quiz-->
+          <button id="start-quiz-button">Start Quiz</button>
+       </div> 
+       <div class="show-questions" id="show-questions">  
+        <ol id="ord-list">           
+        </ol>       
+      </div>
+    </div>
+      <div id="user-info">
+        <form id="form"  class="score-form">
+          <h1>All Done!</h1>   
+          <p>Your final score is <span id="final-score"></span></p>    
+                  
+          <label id="initial">Enter initial:</label>
+          <input  type="text" name="initial" id="initialUser" placeholder="JK" />   
+          <button id="submit-button" type="submit">Submit</button>      
+       </form> 
+       </div>   
+    </main>          
+  <!--MAIN CONTENT END-->   
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
