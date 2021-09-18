@@ -1,9 +1,12 @@
 var highScore = 75;
+var score=0;
 var timecountdown = 75;
 var index = 0;
 var timeInterval;
-var timeEl = document.querySelector("#cnt"); //time
-var scoreFinal = document.getElementById("final-score"); //show the final score
+//Time
+var timeEl = document.querySelector("#cnt"); 
+//show the final score
+var scoreFinal = document.getElementById("final-score"); 
 //button to start quiz
 var startButton = document.querySelector("#start-quiz-button"); 
 var buttonHigScoreView = document.querySelector("#high-score-link");
@@ -25,7 +28,7 @@ var input = document.createElement("input");
 var formLabel = document.createElement("label");
 var submit = document.querySelector("#submit-button");
 var scoreForm = document.querySelector("#score-form");
-//message in the register
+//message to store 
 
 var userinitialImput = document.querySelector("#user-initial");
 var score = document.querySelector("#user-score");
@@ -58,9 +61,11 @@ var arrayquestion = [
 ];
 
 /*
+#############################################################
 Name :showQuestions()
 Description:
 -Function to show the questions
+#############################################################
 */
 
 function showQuestions() {
@@ -74,8 +79,9 @@ function showQuestions() {
 
   // Display questions[i] to document element
   seeQuestion.innerHTML = arrayquestion[index].question;
-  // console.log(index)
-  // console.log(arrayquestion[index].question)
+
+  
+  
   if (arrayquestion[index] !== 4) {
     console.log(arrayquestion[index].question);
     // Display answers for the question [i]
@@ -107,9 +113,11 @@ function showQuestions() {
 }
 
 /*
+#############################################################
   Name : Result
   Description:
   - Function to check result
+#############################################################
 */
 
 function Result() {
@@ -118,7 +126,12 @@ function Result() {
   var wrong = document.createElement("h6");
   wrong.textContent = "Wrong";
   correct.textContent = "Correct";
-
+  console.log("Index: "+index);
+  if(index>arrayquestion.length-1){
+    ShowScore();
+  }
+ 
+ 
   //style for the elements
   correct.setAttribute(
     "Style",
@@ -130,45 +143,60 @@ function Result() {
   );
 
   //condition to check correct answer
+  
   if (this.textContent === arrayquestion[index].correctAnswer) {
     questionAnswer.appendChild(correct);
     setTimeout(function () {
       questionAnswer.innerHTML = "";
-      index++;
-      console.log('Index: '+index)
+      
       if (index === arrayquestion.length) {
         ShowScore();
       } else {
         showQuestions();
       }
+      
     }, 1000);
+    index++;
+   
   } else {
+    
     // 1.) Substract 10 seconds when user selects wrong answer
     // 2.) Only substract if total time is greated or equal to 10 to avoid negative score
     if (timecountdown >= 10) {
       timecountdown = timecountdown - 10;
     }
 
-    //console.log("wrong after" ,timecountdown);
+    console.log("time: "+timecountdown);
     timeEl.textContent = timecountdown;
 
-    // subtract 10 for highScore
-    highScore = highScore - 10;
+    
+    highScore = timecountdown;
     console.log(highScore);
     questionAnswer.appendChild(wrong);
     setTimeout(function () {
       questionAnswer.innerHTML = "";
-      index++;
 
-      showQuestions();
+       
+      if (index === arrayquestion.length) {
+        ShowScore();
+      } else {
+        showQuestions();
+      }
+    
+
+      //showQuestions();
     }, 1000);
+    index++;
+   
   }
 } 
 
 /*
+#############################################################
  Name: starTimer
  Description:
   -Show the current time
+#############################################################
 */
 
 function starTimer() {
@@ -180,28 +208,30 @@ function starTimer() {
     if (timecountdown === 0) {
       ShowScore();
       clearArea();
-      clearInterval(timeInterval);
+      //clearInterval(timeInterval);
     }
   }, 1000);
 }
 
 /*
-
+#############################################################
  Name: clearArea()
  Description:
   - Function to clear questions and answer
+#############################################################
 */
 
 function clearArea() {
-  var removeAnswer = document.getElementById("seeQuestion");
+  var removeAnswer = document.getElementById("show-questions");
   removeAnswer.style.display = "none";
 }
 
 /*
+#############################################################
  Name:ShowScore()
  Description:
    - Function show the results to the user and save his initial
-
+#############################################################
 */
 
 function ShowScore() {
