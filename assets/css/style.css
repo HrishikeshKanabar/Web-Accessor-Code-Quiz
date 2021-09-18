@@ -6,11 +6,10 @@
   font-family: "Lucida Sans", sans-serif;
 }
 
-  body {
+body {
   width: 100%;
-  
 }
-/*style header star*/
+/*style header start*/
 header {
   width: auto;
   margin: 30px 20px;
@@ -40,6 +39,7 @@ header h4 {
 }
 
 /*style header end*/
+
 /*style main start*/
 main {
   margin-top: 60px;
@@ -59,7 +59,7 @@ button {
   border-radius: 10px;
   text-align: center;
   font-size: 20px;
-  color:honeydew;
+  color: honeydew;
 }
 
 button:hover {
@@ -70,8 +70,6 @@ button:hover {
   margin: auto;
   width: 950px;
   flex: 1;
-  
-  
 }
 .quiz-start {
   margin-top: 60px;
@@ -80,21 +78,20 @@ button:hover {
 }
 
 .quiz-start h1 {
-    margin: 15px 15px;
-    text-align: center;
-  }
+  margin: 15px 15px;
+  text-align: center;
+}
 
 .quiz-start p {
   text-align: justify;
   font-size: 25px;
   text-align: center;
-
 }
 
-.show-questions ol{
-    list-style-type: none;
+.show-questions ol {
+  list-style-type: none;
 }
-.form-score{
+.form-score {
   margin-top: 60px;
   flex: 1;
 }
@@ -134,9 +131,8 @@ h1 {
   }
 }
 
+/* this will be applied on any screen between 768px and 575px */
 @media screen and (max-width: 768px) {
-  /* this will be applied on any screen between 768px and 575px */
-
   header {
     width: 100%;
   }
