@@ -26,15 +26,19 @@ Few rules and features:
 
  Start Screen        
 :--------------------------------:|
-![Start Screen ](https://github.com/HrishikeshKanabar/)      
+![Start Screen ](https://github.com/HrishikeshKanabar/Web-Accessor-Code-Quiz/blob/main/assets/images/Start-screen.JPG)      
 
 Questions    
 :--------------------------------:|
-![Start Screen](https://github.com/HrishikeshKanabar/)    
+![Start Screen](https://github.com/HrishikeshKanabar/Web-Accessor-Code-Quiz/blob/main/assets/images/Question-Screen.JPG) 
+
+All Done   
+:--------------------------------:|
+![All Done ](https://github.com/HrishikeshKanabar/Web-Accessor-Code-Quiz/blob/main/assets/images/All%20done.JPG) 
 
 View High score    
 :--------------------------------:|
-![Start Screen](https://github.com/HrishikeshKanabar/) 
+![Start Screen](https://github.com/HrishikeshKanabar/Web-Accessor-Code-Quiz/blob/main/assets/images/Hightscore.JPG) 
 
 
 ## Acceptance Criteria achieved
